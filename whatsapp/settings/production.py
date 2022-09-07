@@ -12,7 +12,7 @@ INSTALLED_APPS.append("storages")
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 DATABASES["default"] = dj_database_url.parse(
-    os.getenv("PROD_DATABASE_URL"), conn_max_age=600
+    os.getenv("DATABASE_URL"), conn_max_age=600
 )
 
 MIDDLEWARE.insert(2, "whitenoise.middleware.WhiteNoiseMiddleware")
