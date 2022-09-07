@@ -9,10 +9,12 @@ https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/
 
 import os
 
+from whatsapp.utils.settings import get_app_settings
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', get_app_settings())
+
+
 from django.core.wsgi import get_wsgi_application
 
-from whatsapp.utils.settings import get_app_settings
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', get_app_settings())
 
 application = get_wsgi_application()
