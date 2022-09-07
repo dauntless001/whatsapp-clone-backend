@@ -3,7 +3,7 @@
 import os
 import sys
 
-from whatsapp.settings.settings import get_app_settings
+from whatsapp.utils.settings import get_app_settings
 
 
 def main():
