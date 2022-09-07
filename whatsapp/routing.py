@@ -6,8 +6,9 @@ from channels.security.websocket import AllowedHostsOriginValidator, OriginValid
 
 from chat.consumers import ChatConsumer
 import chat.routing
+from whatsapp.settings.settings import get_app_settings
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'whatsapp.settings.dev')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', get_app_settings())
 django_asgi_app = get_asgi_application()
 
 

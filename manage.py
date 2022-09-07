@@ -3,10 +3,12 @@
 import os
 import sys
 
+from whatsapp.settings.settings import get_app_settings
+
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'whatsapp.settings.dev')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', get_app_settings())
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
